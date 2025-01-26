@@ -42,6 +42,8 @@ function sortearAmigo() {
         let numeroAleatorio = parseInt(Math.random() * friends.length);
         let amigoSorteado = friends[numeroAleatorio];
 
+        removeElementosLiListaAmigos();
+
         let resultado = document.getElementById('resultado');
         resultado.innerHTML = `O amigo secreto sorteado é: ${amigoSorteado}`;
     } else {
@@ -55,4 +57,9 @@ function validaArray() {
     }
 
     return true;
+}
+
+function removeElementosLiListaAmigos() {
+    let componentesListaAmigos = document.querySelectorAll('.componenteDinamico');
+    componentesListaAmigos.forEach(componente => componente.remove());
 }
