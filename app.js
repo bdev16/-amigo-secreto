@@ -30,6 +30,20 @@ function mostraValoresDaListaNaTela() {
     } while (friends.length != contador);  
 }
 
+function sortearAmigo() {
+    let isValid = validaArray();
+
+    if (isValid) {
+        let numeroAleatorio = parseInt(Math.random() * friends.length);
+        let amigoSorteado = friends[numeroAleatorio];
+
+        let resultado = document.getElementById('resultado');
+        resultado.innerHTML = `O amigo secreto sorteado é: ${amigoSorteado}`;
+    } else {
+        alert('Adiciona mais de 1 pessoa para realizar o sorteio!');
+    }
+}
+
 
 function validaArray() {
     if (friends.length == 0 || friends.length < 2) {
