@@ -1,14 +1,14 @@
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
-let friends = [];
+let amigos = [];
 
 function adicionarAmigo() {
     let nomeAmigo =  document.querySelector('input').value
     let isValid = validaEntrada(nomeAmigo);
 
     if (!isValid) {
-        alert("Por favor, insira um nome.");
+        alert('Por favor, insira um nome.');
     } else {
-        friends.push(nomeAmigo);
+        amigos.push(nomeAmigo);
         nomeAmigo = document.querySelector('input');
         nomeAmigo.value = '';
         mostraValoresDaListaNaTela();
@@ -26,21 +26,21 @@ function validaEntrada(nomeAmigo) {
 function mostraValoresDaListaNaTela() {
     let listaAmigosHtml = document.getElementById('listaAmigos');
 
-    let contador = friends.length;
+    let contador = amigos.length;
     do {
         let componentesListaAmigos = document.createElement('li');
-        componentesListaAmigos.textContent = `${friends[contador - 1]}`;
+        componentesListaAmigos.textContent = `${amigos[contador - 1]}`;
         componentesListaAmigos.classList.add('componenteDinamico');
         listaAmigosHtml.append(componentesListaAmigos);
-    } while (friends.length != contador);  
+    } while (amigos.length != contador);  
 }
 
 function sortearAmigo() {
     let isValid = validaArray();
 
     if (isValid) {
-        let numeroAleatorio = parseInt(Math.random() * friends.length);
-        let amigoSorteado = friends[numeroAleatorio];
+        let numeroAleatorio = parseInt(Math.random() * amigos.length);
+        let amigoSorteado = amigos[numeroAleatorio];
 
         removeElementosLiListaAmigos();
 
@@ -52,7 +52,7 @@ function sortearAmigo() {
 }
 
 function validaArray() {
-    if (friends.length == 0 || friends.length < 2) {
+    if (amigos.length == 0 || amigos.length < 2) {
         return false;
     }
 
