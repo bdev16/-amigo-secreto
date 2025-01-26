@@ -11,7 +11,7 @@ function adicionarAmigo() {
         friends.push(nomeAmigo);
         nomeAmigo = document.querySelector('input');
         nomeAmigo.value = '';
-        console.log(friends);
+        mostraValoresDaListaNaTela();
     }
 }
 
@@ -21,5 +21,12 @@ function validaEntrada(nomeAmigo) {
     }
 
     return true;
+}
+
+function mostraValoresDaListaNaTela() {
+    let contador = friends.length;
+    do {
+        let listaAmigosHtml = document.getElementById('listaAmigos').append(`${friends[contador - 1]}`, document.createElement("li"));
+    } while (friends.length != contador);  
 }
 
