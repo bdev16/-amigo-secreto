@@ -30,3 +30,11 @@ function mostraValoresDaListaNaTela() {
     } while (friends.length != contador);  
 }
 
+
+function validaArray() {
+    if (friends.length == 0 || friends.length < 2) {
+        return false;
+    }
+
+    return true;
+}
