@@ -24,9 +24,14 @@ function validaEntrada(nomeAmigo) {
 }
 
 function mostraValoresDaListaNaTela() {
+    let listaAmigosHtml = document.getElementById('listaAmigos');
+
     let contador = friends.length;
     do {
-        let listaAmigosHtml = document.getElementById('listaAmigos').append(`${friends[contador - 1]}`, document.createElement("li"));
+        let componentesListaAmigos = document.createElement('li');
+        componentesListaAmigos.textContent = `${friends[contador - 1]}`;
+        componentesListaAmigos.classList.add('componenteDinamico');
+        listaAmigosHtml.append(componentesListaAmigos);
     } while (friends.length != contador);  
 }
 
@@ -43,7 +48,6 @@ function sortearAmigo() {
         alert('Adiciona mais de 1 pessoa para realizar o sorteio!');
     }
 }
-
 
 function validaArray() {
     if (friends.length == 0 || friends.length < 2) {
