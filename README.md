@@ -34,6 +34,14 @@ gh repo clone bdev16/-amigo-secreto
 
 https://github.com/user-attachments/assets/a89759c4-9604-45b1-b118-0c50ed13c5ec
 
+# Como testar o projeto
+Acesse o link logo abaixo:
+```
+https://vercel.com/bdev16s-projects/amigo-secreto
+```
+Acesse o link presente na pagina principal do repositorio marcado com a caneta vermelha:
+![Image](https://github.com/user-attachments/assets/093b08ad-d423-48ac-a424-ba2f1596ff0a)
+
 #  Colaboradores
 
 <table>
