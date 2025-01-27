@@ -1,7 +1,7 @@
 # Projeto Amigo Secreto - Alura
 Este projeto consiste em um dos desafios do programa Iniciante em Programação G8 - ONE por meio da plataforma da Alura. O projeto é sobre um sorteador de nomes de maneira aleatoria, para gerar um amigo secreto.
 
-# ✔️ Técnicas e tecnologias utilizadas
+# Técnicas e tecnologias utilizadas
 
 - ``JavaScript; Html; Css``
 - ``Visual Studio Code``
