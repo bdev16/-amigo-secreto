@@ -39,7 +39,8 @@ function sortearAmigo() {
     let isValid = validaArray();
 
     if (isValid) {
-        let numeroAleatorio = parseInt(Math.random() * amigos.length);
+        let numeroAleatorio = Math.floor(Math.random() * amigos.length);
+        console.log(numeroAleatorio);
         let amigoSorteado = amigos[numeroAleatorio];
 
         removeElementosLiListaAmigos();
